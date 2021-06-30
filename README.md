@@ -12,4 +12,3 @@ Given the array nums after the rotation and an integer target, return the index 
 You must write an algorithm with O(log n) runtime complexity.<p>
   
  <h1 align ="center">Day 2</h1>
- 
