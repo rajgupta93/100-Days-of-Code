@@ -39,3 +39,5 @@ In Sample Case #2, only the last day is a record breaking day.
 In Sample Case #3, the first, the third, and the sixth days are record breaking days.
 
 In Sample Case #4, there is no record breaking day.</p>
+
+<h1 align="center">Day 3</h1>
