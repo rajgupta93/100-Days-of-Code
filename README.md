@@ -41,3 +41,8 @@ In Sample Case #3, the first, the third, and the sixth days are record breaking 
 In Sample Case #4, there is no record breaking day.</p>
 
 <h1 align="center">Day 3</h1>
+<p>You are given an array arr[] of N integers including 0. The task is to find the smallest positive number missing from the array.<br>
+  <strong>Constraints</strong><br>
+  <p> 1<=N <= 10^6
+-10^6<= Ai <= 10^6 </p>
+<h1 align="center">Day 4</h1>
