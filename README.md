@@ -101,3 +101,30 @@ In Sample Case #1, each of the two cups of yogurt will expire in one day. Today,
 
 In Sample Case #3, Lucy can consume up to two cups each day, so she can consume all of the yogurt.</p>
 <h1 align="center">Day 4</h1>
+<p>Geek and Geekina are playing chess with a slight change in the rules. The player that eliminates all the pieces of the other player wins the game. Both Geek and Geekina have only one piece left on the board, Geek has his king  on the board at position {x, y} and Geekina has her Queen  on the board at position {a, b} . Its Geekina's turn now. Find whether Geek can survive this turn or not. 
+Input:
+a = 1, b = 1
+x = 1, y = 8
+Output:
+0
+Explanation: 
+Geekina can move her queen in the horizontal
+direction and eliminate Geek's king. Therefore, 
+Geek will not survive the move.
+
+
+Input:
+a = 1, b = 1 
+x = 2, y = 3
+Output:
+1
+Explanation: 
+Geek's king cannot be eliminated in 
+this turn. ie- He will survive.
+Your Task:
+You don't need to read input or print anything. Your task is to complete the function checkmate( ) which takes a,b,x,y  as input parameters and returns true if Geek can survive this turn or false otherwise.
+Note: The generated output is 1 or 0 depicting true or false respectively. 
+
+</p>
+
+<h1 align="center">Day 5</h1>
