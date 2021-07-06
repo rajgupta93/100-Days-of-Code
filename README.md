@@ -128,3 +128,4 @@ Note: The generated output is 1 or 0 depicting true or false respectively.
 </p>
 
 <h1 align="center">Day 5</h1>
+<p>Print all the subarray of an array</p>
