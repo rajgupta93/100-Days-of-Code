@@ -129,3 +129,8 @@ Note: The generated output is 1 or 0 depicting true or false respectively.
 
 <h1 align="center">Day 5</h1>
 <p>Print all the subarray of an array</p>
+<h1 align="center">Day 6</h1>
+<p>Kadan's algorithm
+Find the subarray which has largest sum.
+Time complexity- o(n)
+Space complexity- o(1)</p>
