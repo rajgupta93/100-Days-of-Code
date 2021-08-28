@@ -134,3 +134,5 @@ Note: The generated output is 1 or 0 depicting true or false respectively.
 Find the subarray which has largest sum.
 Time complexity- o(n)
 Space complexity- o(1)</p>
+<h1 align="center">Day 7</h1>
+<p>Reverse an array</p>
