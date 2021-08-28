@@ -136,3 +136,5 @@ Time complexity- o(n)
 Space complexity- o(1)</p>
 <h1 align="center">Day 7</h1>
 <p>Reverse an array</p>
+<h1 align="center">Day 7(2)</h1>
+<p>Find maximum and minimum element in an array</p>
