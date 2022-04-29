@@ -15,21 +15,12 @@ public:
        bool dp[n+1][sum+1]; 
         
         
-        // for(int i=0;i<sum+1;i++)
-        //     for(int j=0;j<n+1;j++)
-        //         if(j==0)
-        //             dp[j][i]=false;
-        //         else if(i==0)
-        //             dp[j][i]=true;
-                       for (int i = 0; i <= n; i++)
-        dp[i][0] = true;
- 
-    // If sum is not 0 and set is empty,
-    // then answer is false
-    for (int i = 1; i <= sum; i++)
-        dp[0][i] = false;
-                    
-                    
+
+for(int i=0;i<n+1;i++)
+    dp[i][0]=true;
+    
+    for(int j=1;j<sum+1;j++)
+        dp[0][j]=false;
         // if(sum==0)
         //     {
         
