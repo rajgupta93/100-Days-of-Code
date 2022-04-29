@@ -9,38 +9,63 @@ using namespace std;
 
 class Solution{   
 public:
-
-int dp[10000][101];
-
-    bool issub(vector<int>arr,int sum,int n)
+ bool issub(vector<int>arr,int sum,int n)
     {
-        if(sum==0)
-            {
         
-         return 1;
+       bool dp[n+1][sum+1]; 
+        
+        
+        // for(int i=0;i<sum+1;i++)
+        //     for(int j=0;j<n+1;j++)
+        //         if(j==0)
+        //             dp[j][i]=false;
+        //         else if(i==0)
+        //             dp[j][i]=true;
+                       for (int i = 0; i <= n; i++)
+        dp[i][0] = true;
+ 
+    // If sum is not 0 and set is empty,
+    // then answer is false
+    for (int i = 1; i <= sum; i++)
+        dp[0][i] = false;
+                    
+                    
+        // if(sum==0)
+        //     {
+        
+        //  return 1;
                 
-            }
-        if(n==0)
-         return 0;
+        //     }
+        // if(n==0)
+        //  return 0;
         // //cout<<n;
-        if(dp[sum][n]!=-1)
-{     
-    return dp[sum][n];}
         
-        if(arr[n-1]>sum)
+//         if(dp[sum][n-1]!=-1)
+// {     
+//     return dp[sum][n-1];}
+        
+        for(int i=1;i<n+1;i++)
         {
-            return dp[sum][n]=issub(arr,sum,n-1);
-            
-        }else
-        {
-            return dp[sum][n]=(issub(arr,sum,n-1))||issub(arr,sum-arr[n-1],n-1);
+            for(int j=1;j<sum+1;j++)
+            {
+                  if(arr[i-1]>j)
+                {
+                 dp[i][j]=dp[i-1][j];
+                 
+                 }else
+                {
+                 dp[i][j]=dp[i-1][j]||dp[i-1][j-arr[i-1]];
+                }   
+            }
         }
+        return dp[n][sum];
+       
     }
 
 
     bool isSubsetSum(vector<int>arr, int sum){
         // code here 
-        memset(dp,-1,sizeof(dp));
+        // memset(dp,-1,sizeof(dp));
         int n=arr.size();
         return issub(arr,sum,n);
     }
