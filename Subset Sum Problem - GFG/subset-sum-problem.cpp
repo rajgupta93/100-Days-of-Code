@@ -23,17 +23,17 @@ int dp[10000][101];
         if(n==0)
          return 0;
         // //cout<<n;
-        if(dp[sum][n-1]!=-1)
+        if(dp[sum][n]!=-1)
 {     
-    return dp[sum][n-1];}
+    return dp[sum][n];}
         
         if(arr[n-1]>sum)
         {
-            return dp[sum][n-1]=issub(arr,sum,n-1);
+            return dp[sum][n]=issub(arr,sum,n-1);
             
         }else
         {
-            return dp[sum][n-1]=(issub(arr,sum,n-1))||issub(arr,sum-arr[n-1],n-1);
+            return dp[sum][n]=(issub(arr,sum,n-1))||issub(arr,sum-arr[n-1],n-1);
         }
     }
 
