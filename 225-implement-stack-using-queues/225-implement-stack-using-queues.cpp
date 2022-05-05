@@ -58,7 +58,7 @@ public:
         
         if(!q1.empty())
           {
-            cout<<q1.size();
+          
             return false;}
         else
             return true;
