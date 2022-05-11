@@ -1,6 +1,6 @@
 class Solution {
 public:
-    // int dp[51][6];
+    int dp[51][6];
     
 //     int nextele(char c)
 //     {
@@ -26,17 +26,20 @@ public:
            
             return 1;
         }
+        
+        if(dp[n][numchar]!=-1)
+            return dp[n][numchar];
         int count=0;
       for(int i=1;i<=numchar;i++){
           count+=countvowel(n-1,i);
       }
        
-        return count;
+        return dp[n][numchar]=count;
     }
     
     int countVowelStrings(int n) {
         
-    // memset(dp,-1,sizeof(dp));
+    memset(dp,-1,sizeof(dp));
         
    return    countvowel(n,5);
         // return count;
