@@ -1,28 +1,31 @@
 class Solution {
-	public:
-	int solve(vector<int>&coins, int index, int amount, vector<vector<int>>&dp){
-		if(amount==0)
-			return 0;
-		if(index>=coins.size() || amount<0)
-			return 1e9;
-
-		if(dp[index][amount]!=-1)
-			return dp[index][amount];
-
-		int a = 1 + solve(coins, index, amount-coins[index], dp);
-		int b = solve(coins, index+1, amount, dp);
-
-		return dp[index][amount] = min(a, b);
-	}
-
-	int coinChange(vector<int>& coins, int amount) {
-
-		int n = coins.size();
-		vector<vector<int>>dp(n+1, vector<int>(amount+1, -1));
-		int ans = solve(coins, 0, amount, dp);
-		if(ans==1e9)
-			return -1;
-		else
-			return ans;
-	}
+public:
+    
+    int dp[13][10001];
+    int coin(vector<int> &coins,int amount,int n)
+    {
+           if(amount==0)
+                return 0;
+            if(n==0)
+                return INT_MAX-1;
+        
+        
+        if(dp[n][amount]!=-1)
+         {
+            return dp[n][amount];}
+        
+        if(coins[n-1]<=amount)
+          {
+return dp[n][amount]=min(coin(coins,amount-coins[n-1],n)+1,coin(coins,amount,n-1));
+        }else   
+        return dp[n][amount]=coin(coins,amount,n-1);
+    }
+    
+    int coinChange(vector<int>& coins, int amount) {
+        memset(dp,-1,sizeof(dp));
+        int ans=coin(coins,amount,coins.size());
+      if(ans==INT_MAX-1)
+         return -1;
+       return ans;
+    }
 };
