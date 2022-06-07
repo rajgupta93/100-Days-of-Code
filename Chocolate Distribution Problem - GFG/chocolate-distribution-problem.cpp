@@ -11,8 +11,8 @@ class Solution{
     sort(a.begin(),a.end());
     
     // 1 3 4 7 9 9 12 56
-    i res=LLONG_MAX;
-    cout<<res;
+    long long res=LLONG_MAX;
+    
     long long i=0;
  
     while(i+m-1<n){
