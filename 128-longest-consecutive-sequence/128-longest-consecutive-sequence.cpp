@@ -15,12 +15,15 @@ public:
         int curr=0;
   
         set<int>:: iterator itr=st.begin();
-        
+      
         int prev=*itr;
-        for(itr = st.begin(); itr!=st.end(); itr++){
-            if(prev+1==*itr) curr++;
-            else {largest=max(curr,largest);
-                 curr=0;}
+          itr++;
+        for(itr = st.begin(); itr != st.end(); itr++){
+            if(prev+1 == *itr) curr++;
+            else {
+                largest = max(curr ,largest);
+                curr = 0;
+            }
             prev=*itr;
           
         }
